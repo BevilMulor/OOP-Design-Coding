@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>University Residence Management System</title>
+    <script src="residenceManagement.js" defer></script>
+</head>
+<body>
+    <h1>University Residence Management System</h1>
+    <script>
+        // Create instances of DormRoom and Apartment
+        const dorm1 = new DormRoom("Dorm 1", "123 University St", 300);
+        const apt1 = new Apartment("Apartment 1", "456 College Ave", 3);
+
+        // Create a student
+        const student1 = new Student("Alice", "S123", "Female");
+
+        // Assign residence to student
+        student1.assignResidence(dorm1);
+
+        // Log student and residence details
+        console.log(student1);
+        console.log(dorm1);
+        console.log(`Rent for ${dorm1.name}: $${dorm1.calculateRent()}`);
+
+        // Create a maintenance request
+        const maintenanceRequest1 = new MaintenanceRequest("Leaky faucet", student1);
+        console.log(maintenanceRequest1);
+
+        // Create an employee and assign to maintenance request
+        const employee1 = new Employee("John", "E456");
+        maintenanceRequest1.assignEmployee(employee1);
+        maintenanceRequest1.updateStatus("in progress");
+
+        // Log maintenance request details
+        console.log(maintenanceRequest1);
+    </script>
+</body>
+</html>

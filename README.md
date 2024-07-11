@@ -1,1 +1,1 @@
-# OOP-Design-Coding
+This code defines classes for the University Residence Management System, providing functionalities for managing students, residences, and maintenance requests. The HTML file demonstrates creating objects, assigning residences to students, and handling maintenance requests.
